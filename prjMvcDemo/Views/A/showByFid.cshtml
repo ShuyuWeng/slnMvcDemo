@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewBag.Title = "showByFid";
+    string photo = "anonymous.jpg";
+    if (ViewBag.kk != null)
+    {
+        photo =@ViewBag.kk.fId + ".jpg";
+    }
+}
+
+<h2>客戶資料查詢</h2>
+<p>
+    <img src="~/images/@photo" width="200" height="180" />
+</p>
+@{
+    if (ViewBag.kk != null)
+    {
+        <h3>@ViewBag.kk.fName</h3>
+        <p>@ViewBag.kk.fPhone</p>
+    }
+    else
+    {
+<h3>沒有符合條件的資料</h3>
+    }
+}
+
+
